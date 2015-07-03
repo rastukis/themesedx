@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %} Inicio - Login {% endblock %}
+
+{% load static %}
+{% block content %}
+<div class="login">
+    <form method="post" action="">
+        <div class="centrar-contenido">
+            <img src="{% static 'assets/images/logo-header.png' %}" alt="Consistent" />
+        </div>
+        <div class="grupo">
+            <label class="caja total no-padding"><span class="icon-user"></span> Usuario:</label>
+            <input type="text" name="user" class="total" />
+        </div>
+        <div class="grupo">
+            <label class="caja total no-padding"><span class="icon-svg"></span> Password:</label>
+            <input type="password" name="password" class="total" />
+        </div>
+        <div>
+            <button type="submit" class="derecha">Ingresar <span class="icon-enter"></span></button>
+        </div>
+    </form>
+</div>
+{% endblock %}

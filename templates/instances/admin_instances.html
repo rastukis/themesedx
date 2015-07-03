@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %} Instancias {% endblock %}
+
+{% load static %}
+{% block content %}
+<div class="grupo bg-blanco">
+    {################## HEADER ##################}
+    {% include "headers/admin.html" %}
+
+    {################## NAVSITE ##################}
+    {% include "navsite/admin.html" %}
+
+    {################## INSTANCIAS ##################}
+    <div class="grupo">
+        <div class="caja total centrar-contenido">
+            <h2>Instancias</h2>
+        </div>
+
+        <div class="caja derecha-contenido">
+            <p><a class="tipo-boton" href="/instances/add">Agregar Instancia</a></p>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Instancia</th>
+                <th>URL</th>
+                <th>Asignado a...</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for instance in instances %}
+            <tr>
+                <td>{{ instance.name }}</td>
+                <td>{{ instance.url }}</td>
+                <td></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+<div class="pagination">
+    <span class="step-links">
+        {% if contacts.has_previous %}
+            <a href="?page={{ instances.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ instances.number }} of {{ instances.paginator.num_pages }}.
+        </span>
+
+        {% if contacts.has_next %}
+            <a href="?page={{ instances.next_page_number }}">next</a>
+        {% endif %}
+    </span>
+</div>
+</div>
+{% endblock %}

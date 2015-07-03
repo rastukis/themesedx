@@ -1,0 +1,60 @@
+// ################### IMPORTS  ################### //
+@import "variables";
+// ################### /IMPORTS  ################### //
+
+
+// ################### GENERAL ################### //
+body{background-color:#EEE;}
+// ################### /GENERAL ################### //
+
+
+// ################### TEXTOS ################### //
+.txt-small{font-size:0.65rem;}
+// ################### /TEXTOS ################### //
+
+
+// ################### FORMULARIOS ################### //
+form{
+	label{
+		font-weight:bold;
+	}
+	input, textarea{
+		padding:0.5rem;
+		border:1px solid #CDCDCD;
+		margin-bottom:1rem;
+		margin-top:0.35rem;
+	}
+}
+button, .button{
+	background-color:$main-color;
+	border:1px solid $dark-color;
+	padding:0.5rem;
+	color:#FFF;
+	border-radius:3px;
+}
+button:hover, .button:hover{
+	background-color:$dark-color;
+	border:1px solid $main-color;
+}
+// ################### /FORMULARIOS ################### //
+
+
+// ################### LOGIN ################### //
+.login{
+	width:500px;
+	height:350px;
+	padding:10px;
+	overflow:hidden;
+	box-sizing: border-box;
+	position: absolute;
+	top:50%;
+	margin:-175px 0 0 -250px;
+	left:50%;
+	background-color:#FFF;
+	box-shadow:0 0 10px #B3B3B3;
+	form{
+		width:400px;
+		margin:0 auto;
+	}
+}
+// ################### /LOGIN ################### //

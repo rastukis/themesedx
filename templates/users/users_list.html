@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %} Usuarios {% endblock %}
+
+{% load static %}
+{% block content %}
+<div class="grupo bg-blanco">
+    {################## HEADER ##################}
+    {% include "headers/admin.html" %}
+
+    {################## NAVSITE ##################}
+    {% include "navsite/admin.html" %}
+
+    {################## INSTANCIAS ##################}
+    <div class="grupo">
+        <div class="caja total centrar-contenido">
+            <h2>Usuarios</h2>
+        </div>
+
+        <div class="caja derecha-contenido">
+            <p><a class="tipo-boton" href="/users/add">Agregar Usuario</a></p>
+        </div>
+    </div>
+    <div class="grupo">
+        <div class="caja total">
+            <table class="total">
+                <thead>
+                    <tr>
+                        <th>Usuario</th>
+                        <th>E-Mail</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in users %}
+                    <tr>
+                        <td>{{ user.last_name }} {{ user.first_name }}</td>
+                        <td>{{ user.email }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2" class="derecha-contenido">
+                            <span class="step-links">
+                                {% if contacts.has_previous %}
+                                    <a href="?page={{ users.previous_page_number }}">Anterior</a>
+                                {% endif %}
+
+                                <span class="current">
+                                    Pagina {{ users.number }} de {{ users.paginator.num_pages }}.
+                                </span>
+
+                                {% if contacts.has_next %}
+                                    <a href="?page={{ users.next_page_number }}">Siguiente</a>
+                                {% endif %}
+                            </span>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

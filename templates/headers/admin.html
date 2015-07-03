@@ -1,0 +1,11 @@
+{% load static %}
+<header>
+    <h1 class="logo caja movil-50 no-padding">
+        <img src="{% static 'assets/images/logo-header.png' %}" alt="Consistent" />
+    </h1>
+
+    <div class="caja movil-50 derecha-contenido caja-sesion">
+        <p>{{ user.last_name }} {{ user.first_name }}</p>
+        <p><a href="{% url 'auth_logout' %}">Cerrar Sesion</a></p>
+    </div>
+</header>

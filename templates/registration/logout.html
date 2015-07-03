@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Logged out" %}{% endblock %}
+
+{% load static %}
+{% block content %}
+<div class="login">
+    <div class="centrar-contenido">
+        <img src="{% static 'assets/images/logo-header.png' %}" alt="Consistent" />
+    </div>
+    <p class="informacion" style="margin-top:65px;">La sesion se ha cerrado correctamente</p>
+    <p class="centrar-contenido" style="margin-top:65px;"><a href="{% url 'auth_login' %}">Iniciar sesion</a></p>
+</div>
+{% endblock %}

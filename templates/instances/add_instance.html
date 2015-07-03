@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %} Instancias {% endblock %}
+
+{% load static %}
+{% block content %}
+<div class="grupo bg-blanco">
+    {################## HEADER ##################}
+    {% include "headers/admin.html" %}
+
+    {################## NAVSITE ##################}
+    {% include "navsite/admin.html" %}
+
+    {################## FORMULARIO INSTANCIAS ##################}
+    <div class="grupo">
+        <form method="post" action="">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="derecha-contenido">
+                <button type="submit">Ingresar</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Administrador | {% block title %} Inicio {% endblock %}</title>
+		<!-- ============================== CSS ============================== -->
+		<!-- Normalize -->
+		<link rel="stylesheet" type="text/css" href="{% static 'assets/css/normalize.min.css' %}">
+		<!-- ED Grid -->
+		<link rel="stylesheet" type="text/css" href="{% static 'assets/css/ed-grid.css' %}" />
+		<!-- Icon Font -->
+		<link rel="stylesheet" type="text/css" href="{% static 'assets/css/icon-font.css' %}" />
+		<!-- Default -->
+		<link rel="stylesheet" type="text/css" href="{% static 'assets/css/default.css' %}" />
+		<!-- ================ /CSS ================ -->
+	</head>
+	<body>
+		{% block content %} {% endblock %}
+		<!-- ============================== JS ============================== -->
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<!-- Default -->
+		<script type="text/javascript" src="{% static 'assets/js/default.js' %}"></script>
+	</body>
+</html>

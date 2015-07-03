@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %} Agregar Usuario {% endblock %}
+
+{% load static %}
+{% block content %}
+<div class="grupo bg-blanco">
+    {################## HEADER ##################}
+    {% include "headers/admin.html" %}
+
+    {################## NAVSITE ##################}
+    {% include "navsite/admin.html" %}
+
+    {################## FORMULARIO USUARIOS ##################}
+    <div class="grupo">
+         <div class="caja total centrar-contenido">
+            <h2>Agregar Usuario</h2>
+        </div>
+
+        <div class="caja total">
+            <form method="post" action="" class="normal-form user-form">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="derecha-contenido">
+                    <button type="submit">Agregar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

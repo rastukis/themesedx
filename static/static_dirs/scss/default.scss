@@ -1,0 +1,182 @@
+// ################### IMPORTS  ################### //
+@import "variables";
+// ################### /IMPORTS  ################### //
+
+
+// ################### GENERAL ################### //
+body{background-color:#EEE;}
+p{margin:0.15rem 0 0.25rem 0;}
+a{text-decoration:none;color:$main-color;}
+a:hover{color:$dark-color;text-decoration:underline;}
+
+nav ul, ul.errorlist{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.bg-blanco{
+	background-color:white;
+}
+.informacion{
+	padding:10px;
+	color: #fff;
+	background-color: #5bc0de;
+	border-color: #46b8da;
+}
+
+.tipo-boton{
+	background-color:$dark-color;
+	color:white;
+	border:1px solid $main-color;
+	padding:10px;
+	border-radius:3px;
+}
+.tipo-boton:hover{
+	background-color:$main-color;
+	color:white;
+	border:1px solid $dark-color;
+	text-decoration:none;
+}
+
+h1, h2, h3, h4, h5, h6{
+	color:$dark-color;
+}
+
+table{
+	thead{
+		background-color:$main-color;
+		th{
+			color:white;
+		}
+	}
+	td, th{
+		padding:5px 10px;
+		border:1px solid $main-color;
+	}
+	tbody{
+		tr:nth-child(odd){
+			background-color:$light-color
+		}
+	}
+}
+// ################### /GENERAL ################### //
+
+
+// ################### TEXTOS ################### //
+.txt-small{font-size:$txt-small;}
+.txt-medium{font-size:$txt-medium;}
+.txt-large{font-size:$txt-large;}
+// ################### /TEXTOS ################### //
+
+
+// ################### FORMULARIOS ################### //
+form{
+	label{
+		font-weight:bold;
+	}
+	input, textarea, select{
+		padding:0.5rem;
+		border:1px solid #CDCDCD;
+	}
+}
+button, .button{
+	background-color:$main-color;
+	border:1px solid $dark-color;
+	padding:0.5rem;
+	color:#FFF;
+	border-radius:3px;
+}
+button:hover, .button:hover{
+	background-color:$dark-color;
+	border:1px solid $main-color;
+}
+ul.errorlist{
+	position:relative;
+	li{
+		position:absolute;
+		right:6px;
+		top:-18px;
+		font-size:$txt-medium;
+		color: #D63301;
+		background-color: #FFCCBA;
+		padding:5px;
+		border:1px solid #D63301;
+		box-shadow:2px 2px 3px #A1A1A1;
+	}
+}
+form.normal-form{
+	p{
+		margin-bottom:20px;
+	}
+	label{
+		width:95px;
+		display:inline-block;
+	}
+}
+form.user-form{
+	width:313px;
+	margin:0 auto;
+	padding-bottom:30px;
+}
+// ################### /FORMULARIOS ################### //
+
+
+// ################### FORMS USER ################### //
+.login{
+	width:341px;
+	height:380px;
+	padding:10px 20px;
+	overflow:hidden;
+	box-sizing: border-box;
+	position: absolute;
+	top:50%;
+	margin:-190px 0 0 -170px;
+	left:50%;
+	background-color:#FFF;
+	box-shadow:0 0 10px #B3B3B3;
+	p{
+		margin:0.75rem 0 1.25rem 0;
+		input{
+			width:100%;
+		}
+	}
+	p:last-child{
+		margin-top:1rem;
+	}
+}
+// ################### /FORMS USER ################### //
+
+
+// ################### HEADER ################### //
+.caja-sesion{
+	p:first-child{margin-top:40px;}
+}
+
+nav{
+	ul{
+		li{
+			background-color:$main-color;
+			a{
+				color:#FFF;
+				padding:15px;
+				display:block;
+				position:relative;
+			}
+			a:hover, a.active{
+				color:#FFF;
+				text-decoration:none;
+				background-color:$dark-color;
+			}
+			a:hover:before, a.active:before{
+				position:absolute;
+				width:100%;
+				height:4px;
+				bottom:-4px;
+				left:0;
+				background-color:$main-color;
+				content:'';
+			}
+		}
+	}
+}
+// ################### /HEADER ################### //
